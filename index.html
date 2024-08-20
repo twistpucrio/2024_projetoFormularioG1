@@ -1,32 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="/styles/index.css">
+    <script src="scripts/index.js"></script>
 </head>
 <body>
     <div id="conteudo">
-        <header id="header"> Twist </header>
-        <nav id="navigator">
-            <a href="index.html"> Home | </a>
-            <a href="pag2.html"> Buscar |</a>
-            <a href="pag3.html"> Arquivo |</a>
-            <a href="pag4.html"> Buscar e Substituir |</a>
-            <a href="pag5.html"> Cadastro </a>
-        </nav>
+        <header class="cabecalho" id="header">
+            <figure class="logo" >
+                <img class="logo__imagem" src="img/logo-twist.png" alt="">
+                <figcaption class="logo__titulo">Twisters</figcaption>
+            </figure>
+            <nav class="navegacao" id="navigator">
+                <ul class="navegacao__container">
+                    <li class="navegacao__container__links"><a href="index.html">Home</a></li>
+                    <li class="navegacao__container__links"><a href="pages/Busca.html">Buscar</a></li>
+                    <li class="navegacao__container__links"><a href="pages/Arquivo.html">Arquivo</a></li>
+                    <li class="navegacao__container__links"><a href="pages/Buscar_Substituir.html">Buscar e Substituir</a></li>
+                    <li class="navegacao__container__links"><a href="pages/Cadastro.html">Cadastro</a></li>
+                </ul>
+            </nav>
+        </header>
         <section>
             <h1> Hello world! Nós, Vitória e Danielle... </h1>
-            <p> Estamos programando um site a partir dos nossos conhecimentos 
+            <figure>
+                <img src="img/logo-twist.png" alt="">
+                <p> Estamos programando um site a partir dos nossos conhecimentos 
                 com Html, Css e JavaScript. Dessa forma, desenvolvemos esse site 
                 para testar as tecnologias utilizadas.</p>
+            </figure>
+            <h3>Tecnologias utilizadas:</h3>
+            <figure>
+                <img src="img/logo-css.png" alt="">
+                <img src="img/logo-Html.png" alt="">
+                <img src="img/logo-javaScript.png" alt="">
+            </figure>
         </section>
         <footer>
-            <p> Desenvolvido por — Danielle Guimarães e Vitória Carteri </p>
             <a href="https://github.com/twistpucrio/formGrupo1">
                 <img src="img/githubicon.png" alt="Github">
             </a>
+            <p> Desenvolvido por — Danielle Guimarães e Vitória Carteri </p>
         </footer>
 </body>
 </html>
