@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'Inter';
+    src: url(/fonts/Inter/static/Inter_18pt-Regular.ttf);
+}
+@font-face {
+    font-family: 'Newsreader';
+    src: url(/fonts/Newsreader/static/Newsreader_14pt-Regular.ttf);
+}
+@font-face {
+    font-family: 'Newsreader';
+    src: url(/fonts/Newsreader/static/Newsreader_14pt-Italic.ttf);
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url(/fonts/Inter/static/Inter_24pt-SemiBold.ttf);
+    font-weight: 500;
+}
+
+#conteudo{
+    width: 100vw;
+    height: auto;
+    background-color: #FA8FDC;
+}
+
+.cabecalho{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.3rem;
+}
+
+.logo{
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.logo__imagem{
+    width: 25%;
+    height: auto;
+
+}
+
+.logo__titulo{
+    width: 70%;
+    padding-top: 0.6rem;
+
+    color: #ffffff;
+    font-family: 'Newsreader';
+    font-size: 2rem;
+    
+}
+.navegacao{
+    display: flex;
+    align-items: center;
+    width: 60%;
+}
+.navegacao__container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.navegacao__container__links{
+    color: #ffffff;
+    font-family: 'Inter';
+    font-size: 1.2rem;
+    padding: 1.5rem;
+}
+
+.navegacao__container__links:hover{
+    background-color: #CB36BC;
+    border-radius: 1rem;
+    font-weight: 500;
+}
