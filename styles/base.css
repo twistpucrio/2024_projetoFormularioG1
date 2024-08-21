@@ -4,11 +4,11 @@
 }
 @font-face {
     font-family: 'Newsreader';
-    src: url(/fonts/Newsreader/static/Newsreader_14pt-Regular.ttf);
+    src: url(/fonts/Newsreader/static/Newsreader_14pt-Light.ttf);
 }
 @font-face {
     font-family: 'Newsreader';
-    src: url(/fonts/Newsreader/static/Newsreader_14pt-Italic.ttf);
+    src: url(/fonts/Newsreader/static/Newsreader_14pt-LightItalic.ttf);
     font-style: italic;
 }
 @font-face {
