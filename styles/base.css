@@ -75,3 +75,29 @@
     border-radius: 1rem;
     font-weight: 500;
 }
+.rodape{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    background-color: #CB36BC;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.rodape__link{
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    height: 30%;
+    margin: 1rem;
+    
+}
+.rodape__link__imagem{
+    width: 20%;
+    height: 20%;
+}
+.rodape__paragrafo{
+    color: white;
+    font-family: 'Inter';
+}
