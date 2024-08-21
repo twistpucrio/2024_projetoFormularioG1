@@ -3,44 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscar</title>
+    <title>Busca</title>
     <link rel="stylesheet" href="estilo.css">
-    <script src="scriptpag1.js"></script>
+    <script src="../scripts/scriptpag2.js"></script>
 </head>
 <body>
     <div id="conteudo">
-        <header id="header"> Twist </header>
-        <nav class="navegacao" id="navigator">
-            <ul class="navegacao__container">
-                <li class="navegacao__container__links"><a href="../index.html">Home</a></li>
-                <li class="navegacao__container__links"><a href="Busca.html">Buscar</a></li>
-                <li class="navegacao__container__links"><a href="Arquivo.html">Arquivo</a></li>
-                <li class="navegacao__container__links"><a href="Buscar_Substituir.html">Buscar e Substituir</a></li>
-                <li class="navegacao__container__links"><a href="Cadastro.html">Cadastro</a></li>
-            </ul>
-        </nav>
-        <section>
-            <p><strong>Selecione o tipo de verificação: </strong> </p>
-            <form action="" name="pagina1">
+        <header class="cabecalho" id="header">
+            <figure class="logo" >
+                <img class="logo__imagem" src="img/logo-twist.png" alt="">
+                <figcaption class="logo__titulo">Twisters</figcaption>
+            </figure>
+            <nav class="navegacao" id="navigator">
+                <ul class="navegacao__container">
+                    <li class="navegacao__container__links"><a href="../index.html">Home</a></li>
+                    <li class="navegacao__container__links"><a href="Busca.html">Buscar</a></li>
+                    <li class="navegacao__container__links"><a href="Arquivo.html">Arquivo</a></li>
+                    <li class="navegacao__container__links"><a href="Buscar_Substituir.html">Buscar e Substituir</a></li>
+                    <li class="navegacao__container__links"><a href="Cadastro.html">Cadastro</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="main">
+            <form>
+                <p><strong>Selecione o tipo de arquivo: </strong></p>
                 <input type="radio" name="atividade" id="caracteres">
-                <label for="caracteres">Caracteres especiais </label>
+                <label for="caracteres">JPG / JPEG / PNG </label>
+
                 <input type="radio" name="atividade" id="letras">
-                <label for="letras">Letras minúsculas </label>
+                <label for="letras">PDF </label>
+
                 <input type="radio" name="atividade" id="digitos">
-                <label for="digitos">Digitos numéricos </label>
+                <label for="digitos">DOC </label>
+
                 <input type="radio" name="atividade" id="maiusculas">
-                <label for="maiusculas">Maiúsculas </label>
+                 <label for="maiusculas">CSV </label>
                 <br/>
-                <br/>
-                <p><strong>Escreva seu texto: </strong></p>
-                <textarea name="conteudo" id="conteudo"
-                          cols="30" rows="20"> </textarea>
+                <p><strong>Reglas nomenclatura: </strong></p>
+                <ul>
+                    <li>Não possibilitar preencher o nome do arquivo com caractéres especiais (exceto underscore); </li>
+                    <br/>
+                    <li>Iniciar com letra minúscula; </li>
+                    <br/>
+                    <li>Deve ter o tamanho mínimo 8 caracteres e máximo 15</li>
+                </ul>
+                <p><strong>Arquivo: </strong></p>
+                <input type="text" name="nome" id="nome">
+
                 <br/><br/>
                 <input type="button" value="Limpar"
-                       id="btnLimpar">
-                       <input type="button" value="Submeter"
-                              id="btnSubmeter">
-                <br/>
+                id="btnLimpar">
+                <input type="button" value="Submeter"
+                id="btnSubmeter">
             </form>
         </section>
         <footer></footer>
