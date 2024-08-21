@@ -9,14 +9,47 @@
 <body>
     <div id="conteudo">
         <header id="header"> Twist </header>
-        <nav id="navigator">
-            <a href="index.html"> Home | </a>
-            <a href="pag2.html"> Buscar |</a>
-            <a href="pag3.html"> Arquivo |</a>
-            <a href="pag4.html"> Buscar e Substituir |</a>
-            <a href="pag5.html"> Cadastro </a>
+        <nav class="navegacao" id="navigator">
+            <ul class="navegacao__container">
+                <li class="navegacao__container__links"><a href="../index.html">Home</a></li>
+                <li class="navegacao__container__links"><a href="Busca.html">Buscar</a></li>
+                <li class="navegacao__container__links"><a href="Arquivo.html">Arquivo</a></li>
+                <li class="navegacao__container__links"><a href="Buscar_Substituir.html">Buscar e Substituir</a></li>
+                <li class="navegacao__container__links"><a href="Cadastro.html">Cadastro</a></li>
+            </ul>
         </nav>
-        <section></section>
+        <section>
+            <form action="">
+                <p><strong>Dados pessoais: </strong></p>
+                <label for="nome">Nome: </label>
+                <input type="text" name="nome" id="nome">
+                <br/><br/>
+                <label for="nome">CPF: </label>
+                <input type="text" value="ddd.ddd.ddd-dd" name="cpf" id="cpf">
+                <br/><br/>
+                <label for="dataNascimento">Nascimento: </label>
+                <input type="data" value="dd/mm/aaaa" name="dataNascimento" id="dataNascimento">
+                <br/><br/>
+
+                <p><strong> Dados perfil: </strong></p>
+                <label for="usu">Usuário: </label>
+                <input type="text" id="usu">
+                <br/><br/>
+                <label for="mail">Email: </label>
+                <input type="text" value="algumacoisa@algumacoisa..." id="mail">
+                <br/><br/>
+                <label for="senha">Senha </label>
+                <input type="password" value="senhanshshs" id="senha">
+                <br/><br/>
+                <label for="senha">Senha </label>
+                <input type="password" value="senhanshshs" id="senha">
+                <br/><br/>
+                <input type="button" value="Limpar"
+                id="btnLimpar">
+                <input type="button" value="Submeter"
+                id="btnSubmeter">
+            </form>
+        </section>
         <footer></footer>
 </body>
 </html>
