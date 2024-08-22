@@ -43,25 +43,11 @@
                 <p><strong>Escreva seu texto: </strong></p>
                 <textarea id="textArea" cols="30" rows="20" placeholder="Digite seu texto aqui..."></textarea>
                 <br/><br/>
-                <input type="button" onclick="buscarRegex()" value="Limpar" id="btnLimpar">
-                <input type="button" value="Submeter" id="btnSubmeter">
+                <input type="button" value="Limpar" id="btnLimpar">
+                <input type="button" onclick="buscarRegex()" value="Submeter" id="btnSubmeter">
                 <br/>
             </form>
         </section>
         <footer></footer>
-        <script>
-            function buscarRegex() {
-    const text = document.getElementById('textArea').value;
-    const regexValue = document.querySelector('input[name="regex"]:checked').value;
-    const regex = new RegExp(regexValue, 'g');
-    const matches = text.match(regex);
-    
-    if (matches) {
-        alert(`Padrão ${regexValue} encontrado, quantidade de ocorrências: ${matches.length}`);
-    } else {
-        alert(`Padrão ${regexValue} não encontrado`);
-    }
-}
-        </script>
 </body>
 </html>

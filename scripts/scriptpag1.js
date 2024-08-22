@@ -10,4 +10,3 @@ function buscarRegex() {
         alert(`Padrão ${regexValue} não encontrado`);
     }
 }
-alert("auuuuuuuuuu")
