@@ -3,52 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Busca</title>
+    <title>Buscar</title>
     <link rel="stylesheet" href="estilo.css">
+    <script src="../scripts/scriptpag1.js"></script>
 </head>
 <body>
     <div id="conteudo">
-        <header id="header"> Twist </header>
-        <nav class="navegacao" id="navigator">
-            <ul class="navegacao__container">
-                <li class="navegacao__container__links"><a href="../index.html">Home</a></li>
-                <li class="navegacao__container__links"><a href="Busca.html">Buscar</a></li>
-                <li class="navegacao__container__links"><a href="Arquivo.html">Arquivo</a></li>
-                <li class="navegacao__container__links"><a href="Buscar_Substituir.html">Buscar e Substituir</a></li>
-                <li class="navegacao__container__links"><a href="Cadastro.html">Cadastro</a></li>
-            </ul>
-        </nav>
-        <section>
-            <form>
-                <p><strong>Selecione o tipo de arquivo: </strong></p>
-                <input type="radio" name="atividade" id="caracteres">
-                <label for="caracteres">JPG / JPEG / PNG </label>
-
-                <input type="radio" name="atividade" id="letras">
-                <label for="letras">PDF </label>
-
-                <input type="radio" name="atividade" id="digitos">
-                <label for="digitos">DOC </label>
-
-                <input type="radio" name="atividade" id="maiusculas">
-                 <label for="maiusculas">CSV </label>
-                <br/>
-                <p><strong>Reglas nomenclatura: </strong></p>
-                <ul>
-                    <li>Não possibilitar preencher o nome do arquivo com caractéres especiais (exceto underscore); </li>
-                    <br/>
-                    <li>Iniciar com letra minúscula; </li>
-                    <br/>
-                    <li>Deve ter o tamanho mínimo 8 caracteres e máximo 15</li>
+        <header class="cabecalho" id="header">
+            <figure class="logo" >
+                <img class="logo__imagem" src="img/logo-twist.png" alt="">
+                <figcaption class="logo__titulo">Twisters</figcaption>
+            </figure>
+            <nav class="navegacao" id="navigator">
+                <ul class="navegacao__container">
+                    <li class="navegacao__container__links"><a href="../index.html">Home</a></li>
+                    <li class="navegacao__container__links"><a href="Busca.html">Buscar</a></li>
+                    <li class="navegacao__container__links"><a href="Arquivo.html">Arquivo</a></li>
+                    <li class="navegacao__container__links"><a href="Buscar_Substituir.html">Buscar e Substituir</a></li>
+                    <li class="navegacao__container__links"><a href="Cadastro.html">Cadastro</a></li>
                 </ul>
-                <p><strong>Arquivo: </strong></p>
-                <input type="text" name="nome" id="nome">
-
+            </nav>
+        </header>
+        <section class="main">
+            <p><strong>Selecione o tipo de verificação: </strong> </p>
+            <form action="" name="pagina1">
+                <input type="radio" id="regex1" name="regex" value="[^a-zA-Z0-9\\s]">
+                <label for="regex1">Caracteres Especiais</label><br>
+    
+                <input type="radio" id="regex2" name="regex" value="[a-z]">
+                <label for="regex2">Letras Minúsculas</label><br>
+    
+                <input type="radio" id="regex3" name="regex" value="\\d">
+                <label for="regex3">Dígitos Numéricos</label><br>
+    
+                <input type="radio" id="regex4" name="regex" value="[A-Z]">
+                <label for="regex4">Letras Maiúsculas</label><br><br>
+                <br/>
+                <br/>
+                <p><strong>Escreva seu texto: </strong></p>
+                <textarea id="textArea" cols="30" rows="20" placeholder="Digite seu texto aqui..."></textarea>
                 <br/><br/>
-                <input type="button" value="Limpar"
-                id="btnLimpar">
-                <input type="button" value="Submeter"
-                id="btnSubmeter">
+                <input type="button" value="Limpar" id="btnLimpar">
+                <input type="button" onclick="buscarRegex()" value="Submeter" id="btnSubmeter">
+                <br/>
             </form>
         </section>
         <footer></footer>
