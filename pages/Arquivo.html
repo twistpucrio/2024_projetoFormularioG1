@@ -4,45 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscar</title>
-    <link rel="stylesheet" href="estilo.css">
-    <script src="scriptpag1.js"></script>
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/arquivo.css">
 </head>
 <body>
     <div id="conteudo">
-        <header id="header"> Twist </header>
-        <nav class="navegacao" id="navigator">
-            <ul class="navegacao__container">
-                <li class="navegacao__container__links"><a href="../index.html">Home</a></li>
-                <li class="navegacao__container__links"><a href="Busca.html">Buscar</a></li>
-                <li class="navegacao__container__links"><a href="Arquivo.html">Arquivo</a></li>
-                <li class="navegacao__container__links"><a href="Buscar_Substituir.html">Buscar e Substituir</a></li>
-                <li class="navegacao__container__links"><a href="Cadastro.html">Cadastro</a></li>
-            </ul>
-        </nav>
-        <section>
-            <p><strong>Selecione o tipo de verificação: </strong> </p>
-            <form action="" name="pagina1">
-                <input type="radio" name="atividade" id="caracteres">
-                <label for="caracteres">Caracteres especiais </label>
-                <input type="radio" name="atividade" id="letras">
-                <label for="letras">Letras minúsculas </label>
-                <input type="radio" name="atividade" id="digitos">
-                <label for="digitos">Digitos numéricos </label>
-                <input type="radio" name="atividade" id="maiusculas">
-                <label for="maiusculas">Maiúsculas </label>
-                <br/>
-                <br/>
-                <p><strong>Escreva seu texto: </strong></p>
-                <textarea name="conteudo" id="conteudo"
-                          cols="30" rows="20"> </textarea>
+        <header class="cabecalho" id="header">
+            <figure class="logo" >
+                <img class="logo__imagem" src="/img/logo-twist.png" alt="">
+                <figcaption class="logo__titulo">Twisters</figcaption>
+            </figure>
+            <nav class="navegacao" id="navigator">
+                <ul class="navegacao__container">
+                    <li class="navegacao__container__links"><a href="../index.html">Home</a></li>
+                    <li class="navegacao__container__links"><a href="Busca.html">Buscar</a></li>
+                    <li class="navegacao__container__links"><a href="Arquivo.html">Arquivo</a></li>
+                    <li class="navegacao__container__links"><a href="Buscar_Substituir.html">Buscar e Substituir</a></li>
+                    <li class="navegacao__container__links"><a href="Cadastro.html">Cadastro</a></li>
+                </ul>
+            </nav>
+        </header>
+        section>
+            <form>
+                <p><strong>Selecione o tipo de arquivo: </strong></p>
+                <fieldset>
+                    <input type="radio" name="formato" id="imagem">
+                    <label for="formato">JPG / JPEG / PNG</label>
+
+                    <input type="radio" name="formato" id="pdf">
+                    <label for="pdf">PDF</label>
+
+                    <input type="radio" name="formato" id="documento">
+                    <label for="documento">DOC</label>
+
+                    <input type="radio" name="formato" id="csv">
+                    <label for="csv">CSV</label>
+                </fieldset>
+                <hgroup>
+                    <h4>Reglas nomenclatura: </h4>
+                    <ul>
+                        <li>Não possibilitar preencher o nome do arquivo com caractéres especiais (exceto underscore); </li>
+                        <li>Iniciar com letra minúscula; </li>
+                        <li>Deve ter o tamanho mínimo 8 caracteres e máximo 15</li>
+                    </ul>
+                </hgroup>
+                <p><strong>Arquivo: </strong></p>
+                <input type="text" name="nome" id="nome">
+
                 <br/><br/>
                 <input type="button" value="Limpar"
-                       id="btnLimpar">
-                       <input type="button" value="Submeter"
-                              id="btnSubmeter">
-                <br/>
+                id="btnLimpar">
+                <input type="button" value="Submeter"
+                id="btnSubmeter">
             </form>
         </section>
-        <footer></footer>
+        <footer class="rodape">
+            <a class="rodape__link" href="https://github.com/twistpucrio/formGrupo1">
+                <img class="rodape__link__imagem" src="/img/githubicon.png" alt="Github">
+            </a>
+            <p class="rodape__paragrafo"> <strong>Desenvolvido por</strong> — Danielle Guimarães e Vitória Carteri </p>
+        </footer>
 </body>
 </html>
