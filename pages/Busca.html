@@ -18,35 +18,37 @@
             </figure>
             <nav class="navegacao" id="navigator">
                 <ul class="navegacao__container">
-                    <li class="navegacao__container__links"><a href="index.html">Home</a></li>
-                    <li class="navegacao__container__links"><a href="pages/Busca.html">Buscar</a></li>
-                    <li class="navegacao__container__links"><a href="pages/Arquivo.html">Arquivo</a></li>
-                    <li class="navegacao__container__links"><a href="pages/Buscar_Substituir.html">Buscar e Substituir</a></li>
-                    <li class="navegacao__container__links"><a href="pages/Cadastro.html">Cadastro</a></li>
+                    <li class="navegacao__container__links"><a href="../index.html">Home</a></li>
+                    <li class="navegacao__container__links"><a href="Busca.html">Buscar</a></li>
+                    <li class="navegacao__container__links"><a href="Arquivo.html">Arquivo</a></li>
+                    <li class="navegacao__container__links"><a href="Buscar_Substituir.html">Buscar e Substituir</a></li>
+                    <li class="navegacao__container__links"><a href="Cadastro.html">Cadastro</a></li>
                 </ul>
             </nav>
         </header>
         <main class="principal">
-            <fieldset class="selecao" action="">
-                <h2 class="selecao__titulo">Selecione o tipo de verificação: </h2>
-                <form class="selecao__conteudo" action="">
-                    <input type="radio" name="verificacao" id="caracteres">
-                    <label for="caracteres">Caracteres especiais </label>
-                    <input type="radio" name="verificacao" id="letras">
-                    <label for="letras">Letras minúsculas </label>
-                    <input type="radio" name="varificacao" id="digitos">
-                    <label for="digitos">Digitos numéricos </label>
-                    <input type="radio" name="verificacao" id="maiusculas">
-                    <label for="maiusculas">Maiúsculas </label>
-                </form>
-            </fieldset>
-            <h3>Escreva seu texto:</h3>
-            <form action="">
-                <textarea name="conteudo" id="conteudo"
-                          cols="30" rows="20"> </textarea>
-                <br/><br/>
-                <input type="button" value="Limpar" id="btnLimpar">
-                <input type="button" value="Submeter" id="btnSubmeter">
+            <form class="selecao" action="">
+                <fieldset class="panel selecao__opcoes">
+                    <h2 class="selecao__opcoes__titulo">Selecione o tipo de verificação: </h2>
+                    <div class="selecao__opcoes__conteudo" action="">
+                        <input class="" type="radio" name="verificacao" id="caracteres">
+                        <label for="caracteres">Caracteres especiais </label>
+                        <input type="radio" name="verificacao" id="letras">
+                        <label for="letras">Letras minúsculas </label>
+                        <input type="radio" name="varificacao" id="digitos">
+                        <label for="digitos">Digitos numéricos </label>
+                        <input type="radio" name="verificacao" id="maiusculas">
+                        <label for="maiusculas">Maiúsculas </label>
+                    </div>
+                </fieldset>
+                <fieldset class="panel selecao__texto">
+                    <h3 class="selecao__texto__titulo">Escreva seu texto:</h3>
+                    <textarea class="panel selecao__texto__textarea" name="" id="" cols="30" rows="20"></textarea>
+                    <div class="selecao__texto__botoes">
+                        <input class="botao" type="button" value="Limpar" id="btnLimpar">
+                        <input class="botao" type="button" value="Submeter" id="btnSubmeter">
+                    </div>
+                </fieldset>
             </form>
         </main>
         <footer class="rodape">
