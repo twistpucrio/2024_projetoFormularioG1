@@ -1,0 +1,87 @@
+.principal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+    padding: 2rem;
+}
+.formulario{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+
+}
+.formulario__formatos{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    width: 60%;
+    height: 60%;
+}
+.formulario__formatos__titulo{
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    font-family: 'Newsreader';
+    font-style: italic;
+
+}
+.formulario__formatos__selecao{
+    width: 100%; 
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 1rem;
+    color: white;
+    font-size: 1.6rem;
+    font-family: 'Inter';
+}
+.formulario__formatos__selecao label{
+    margin: 0 2rem 0 0;
+
+}
+.formulario__arquivos{
+    width: 80%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formulario__arquivos__input{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    color: white;
+
+}
+
+
+.formulario__arquivos__input__titulo{
+    font-size: 2rem;
+}
+.formulario__arquivos__input__regras{
+    
+}
+.formulario__arquivos__input__regras__titulo{
+    font-size: 2.3rem;
+    text-align: center;
+}
+.formulario__arquivos__input__regras__texto li{
+    font-size: 1.8rem;
+    list-style: disc;
+    text-align: justify;
+}
+
+
+.panel{
+    border: 0.2rem #CB36BC solid;
+    border-radius: 1rem;
+    padding: 2rem;
+    gap: 2rem;
+}

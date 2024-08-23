@@ -25,38 +25,45 @@
                 </ul>
             </nav>
         </header>
-        section>
-            <form>
-                <p><strong>Selecione o tipo de arquivo: </strong></p>
-                <fieldset>
-                    <input type="radio" name="formato" id="imagem">
-                    <label for="formato">JPG / JPEG / PNG</label>
+        <section class="principal">
+            <form class="formulario">
+                <fieldset class="panel formulario__formatos">
+                    <h2 class="formulario__formatos__titulo">Selecione o tipo de arquivo: </h2>
+                    <div class="formulario__formatos__selecao">
+                        <input type="radio" name="formato" id="imagem">
+                        <label for="formato">JPG / JPEG / PNG</label>
 
-                    <input type="radio" name="formato" id="pdf">
-                    <label for="pdf">PDF</label>
+                        <input type="radio" name="formato" id="pdf">
+                        <label for="pdf">PDF</label>
 
-                    <input type="radio" name="formato" id="documento">
-                    <label for="documento">DOC</label>
+                        <input type="radio" name="formato" id="documento">
+                        <label for="documento">DOC</label>
 
-                    <input type="radio" name="formato" id="csv">
-                    <label for="csv">CSV</label>
+                        <input type="radio" name="formato" id="csv">
+                        <label for="csv">CSV</label>
+                    </div>
                 </fieldset>
-                <hgroup>
-                    <h4>Reglas nomenclatura: </h4>
-                    <ul>
-                        <li>Não possibilitar preencher o nome do arquivo com caractéres especiais (exceto underscore); </li>
-                        <li>Iniciar com letra minúscula; </li>
-                        <li>Deve ter o tamanho mínimo 8 caracteres e máximo 15</li>
-                    </ul>
-                </hgroup>
-                <p><strong>Arquivo: </strong></p>
-                <input type="text" name="nome" id="nome">
-
-                <br/><br/>
-                <input type="button" value="Limpar"
-                id="btnLimpar">
-                <input type="button" value="Submeter"
-                id="btnSubmeter">
+                <fieldset class="panel">
+                    <div class="">
+                        <h3 class="">Arquivo: </h3>
+                        <input type="file" name="arquivo" id="arquivo">
+                        
+                        <hgroup class="">
+                            <h4 class="">Reglas nomenclatura: </h4>
+                            <ul class="">
+                                <li>Não possibilitar preencher o nome do arquivo com caractéres especiais (exceto underscore); </li>
+                                <li>Iniciar com letra minúscula; </li>
+                                <li>Deve ter o tamanho mínimo 8 caracteres e máximo 15</li>
+                            </ul>
+                        </hgroup>
+                    </div>
+                    <div class="arquivos botoes">
+                        <input type="button" value="Limpar"
+                        id="btnLimpar">
+                        <input type="button" value="Submeter"
+                        id="btnSubmeter">
+                    </div>
+                </fieldset>
             </form>
         </section>
         <footer class="rodape">
