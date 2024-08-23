@@ -25,7 +25,7 @@
             </nav>
         </header>
         <section class="main">
-            <form>
+            <form id="uploadForm">
                 <p><strong>Selecione o tipo de arquivo: </strong></p>
                 <input type="radio" name="atividade" id="caracteres">
                 <label for="caracteres">JPG / JPEG / PNG </label>
@@ -48,13 +48,11 @@
                     <li>Deve ter o tamanho mínimo 8 caracteres e máximo 15</li>
                 </ul>
                 <p><strong>Arquivo: </strong></p>
-                <input type="text" name="nome" id="nome">
-
+                <input type="file" id="fileInput" accept=".jpg,.png,.pdf" required>
                 <br/><br/>
                 <input type="button" value="Limpar"
-                id="btnLimpar">
-                <input type="button" value="Submeter"
-                id="btnSubmeter">
+                       id="btnLimpar">
+                <button type="button">Submeter</button>
             </form>
         </section>
         <footer></footer>

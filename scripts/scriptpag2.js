@@ -1,39 +1,48 @@
-function executar(n, t){
-    const padrao = RegExp('maria*','g');
-    let resp;
-    resp =  padrao.exec(nome);
-    alert("Nome: "+resp);
+function validarExtensao(arquivo, extensao){
+    // obs: arquivo é o elemento input: file inteiro
 
-    resp = padrao.exec(t);
-    alert("Texto: "+resp);
+
+
+
+    /* PEGAR O NOME DO ARQUIVO */
+
+
+
+
+    // alert(arquivo.value)
+    caminho = arquivo.value.split(".");
+
+
+
+
+    // alert(caminho)
+    alert("Primeira forma: " + caminho[ caminho.length - 1])
+
+
+
+
+    /* outra maneira: */
+    let resposta = arquivo.files[0];
+    alert("Segunda forma: " + resposta.name)
+
+
+
+
+    /* PEGAR A EXTENSAO */
+    // split no ponto
+    let indice = caminho.length - 1;
+    let comparacao = caminho[indice].split(".");
+    let ext = comparacao[comparacao.length - 1];
+    alert(ext)
+
+
+
+
+    if(extensao.lower === ext.lower){
+        alert("igual")
+    }
+    else{
+        alert("diferente")
+    }
 }
-
-function testar(n,t){
-    const padrao = new RegExp('maria*', 'g');
-    
-    let resp = padrao.test(n);
-    alert("Nome: "+resp);
-
-    resp = padrao.test(t);
-    alert("Texto: "+resp);
-}
-
-window.addEventListener("load", function(){
-    let btnTestar = document.querySelector("#btnTestar");
-    let btnExecutar =  document.querySelector("btnExec");
-
-    // colocar o evento de clicar nos botões
-
-    btnExecutar.addEventListener("click", function(){
-        let nome, texto;
-        nome = document.querySelector("#nome");
-        texto =  document.querySelector("texto");
-        executar (nome,texto,value);
-    });
-
-    btnTestar.addEventListener("click", function(){
-        nome = document.querySelector("#nome");
-        texto =  document.querySelector("texto");
-        testar (nome,texto,value);
-    });
-});
+                // validarExtensao(arq, "doc");
