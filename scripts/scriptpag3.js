@@ -1,32 +1,12 @@
-function substituir(entrada,altera){
-    let resp = entrada.replace(altera,"*******");
-    alert(resp);
-    
-    // exemplo com expressao regular
-    resp = entrada.replace(/\w/,"removido ");
-    alert("Expressao Regular"+resp);
+function substituirPalavra() {
+    // Obter os valores dos campos de entrada
+    const palavraProcurar = document.getElementById('palavraProcurar').value;
+    const palavraSubstituir = document.getElementById('palavraSubstituir').value;
+    const textoOriginal = document.getElementById('textoOriginal').value;
+
+    // Substituir a palavra procurada pela nova palavra
+    const novoTexto = textoOriginal.replace(new RegExp(palavraProcurar, 'g'), palavraSubstituir);
+
+    // Exibir o resultado
+    document.getElementById('resultado').innerText = novoTexto;
 }
-
-function cortar(entrada,corte){}
-
-window.MediaEncryptedEvent("load", function(){
-    let btnSplit, btnReplace;
-
-    btnSplit = document.querySelector("#btnSplit");
-    btnReplace = document.querySelector("#btnReplace");
-
-    let entrada, alterar;
-
-    btnReplace.addEventListener("click", function(){
-        entrada = document.querySelector("#entrada");
-        alterar = document.querySelector("#alterar");
-        substituir(entrada.value,alterar.value);
-    });
-
-    btnSplit.addEventListener("click", function(){
-        entrada = document.querySelector("#entrada");
-        alterar = document.querySelector("#alterar");
-        cortar(entrada.value,alterar.value);
-
-    });
-});
