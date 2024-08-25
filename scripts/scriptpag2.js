@@ -1,39 +1,44 @@
-function executar(n, t){
-    const padrao = RegExp('maria*','g');
-    let resp;
-    resp =  padrao.exec(nome);
-    alert("Nome: "+resp);
+function validateFileName() {
+    const fileInput = document.getElementById('fileInput').files[0];
+    const errorMessage = document.getElementById('errorMessage');
+    const fileType = document.querySelector('input[name="fileType"]:checked').value;
 
-    resp = padrao.exec(t);
-    alert("Texto: "+resp);
+    if (!fileInput) {
+        errorMessage.textContent = "Por favor, selecione um arquivo.";
+        return;
+    }
+
+    const fileNameParts = fileInput.name.split('.');
+    const fileName = fileNameParts[0];
+    const fileExtension = fileNameParts[1].toLowerCase();
+
+    // Verificar se a extensão do arquivo corresponde ao tipo selecionado
+    if ((fileType === 'image' && !['jpg', 'jpeg', 'png'].includes(fileExtension)) ||
+        (fileType === 'pdf' && fileExtension !== 'pdf') ||
+        (fileType === 'doc' && fileExtension !== 'doc') ||
+        (fileType === 'csv' && fileExtension !== 'csv')) {
+        errorMessage.textContent = "A extensão do arquivo não corresponde ao tipo selecionado.";
+        return;
+    }
+
+    // Verificar se o nome começa com letra maiúscula
+    if (!/^[A-Z]/.test(fileName)) {
+        errorMessage.textContent = "O nome do arquivo deve começar com letra maiúscula.";
+        return;
+    }
+
+    // Verificar se o nome contém apenas caracteres permitidos
+    if (!/^[A-Za-z0-9_]+$/.test(fileName)) {
+        errorMessage.textContent = "O nome do arquivo não pode conter caracteres especiais (exceto underline).";
+        return;
+    }
+
+    // Verificar o tamanho do nome do arquivo
+    if (fileName.length < 8 || fileName.length > 15) {
+        errorMessage.textContent = "O nome do arquivo deve ter entre 8 e 15 caracteres.";
+        return;
+    }
+
+    // Se todas as validações passarem
+    errorMessage.textContent = "Nome do arquivo válido!";
 }
-
-function testar(n,t){
-    const padrao = new RegExp('maria*', 'g');
-    
-    let resp = padrao.test(n);
-    alert("Nome: "+resp);
-
-    resp = padrao.test(t);
-    alert("Texto: "+resp);
-}
-
-window.addEventListener("load", function(){
-    let btnTestar = document.querySelector("#btnTestar");
-    let btnExecutar =  document.querySelector("btnExec");
-
-    // colocar o evento de clicar nos botões
-
-    btnExecutar.addEventListener("click", function(){
-        let nome, texto;
-        nome = document.querySelector("#nome");
-        texto =  document.querySelector("texto");
-        executar (nome,texto,value);
-    });
-
-    btnTestar.addEventListener("click", function(){
-        nome = document.querySelector("#nome");
-        texto =  document.querySelector("texto");
-        testar (nome,texto,value);
-    });
-});

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscar e substituir</title>
     <link rel="stylesheet" href="estilo.css">
-    <script src="scriptpag3.js"></script>
+    <script src="../scripts/scriptpag3.js"></script>
 </head>
 <body>
     <div id="conteudo">
@@ -26,21 +26,23 @@
         </header>
         <section class="main">
             <br/>
-            <form>
-                <label for="nome"><strong>Pesquisa: </strong></label>
-                <input type="text" name="pesquisa" id="pesquisa">
+            <form id="formulario">
+                <label for="palavraProcurar">Pesquisa: </label>
+                <input type="text" name="entrada" id="palavraProcurar">
                 <br/>
                 <br/>
-                <label for="nome"><strong>Substituir: </strong></label>
-                <input type="text" name="substituir" id="substituir">
+                <label for="palavraSubstituir">Substituir: </label>
+                <input type="text" name="altera" id="palavraSubstituir">
                 <p><strong>Escreva seu texto: </strong></p>
-                <textarea name="conteudo" id="conteudo"
+                <textarea name="conteudo" id="textoOriginal"
                           cols="30" rows="20"> </textarea>
-                <br/><br/><br/>
-                <input type="button" value="Limpar"
-                id="btnLimpar">
-                <input type="button" value="Submeter"
-                id="btnSubmeter">
+                <br/><br/>
+                <p><strong>Resultado: </strong></p>
+                <textarea name="novo" id="resultado"
+                          cols="30" rows="20"> </textarea>
+                <br/>
+                <input type="button" value="Limpar" id="btnSplit">
+                <input type="button" onclick="substituirPalavra()" value="Submeter" id="btnReplace">
             </form>
         </section>
         <footer></footer>
