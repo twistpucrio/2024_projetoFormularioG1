@@ -22,6 +22,7 @@ window.addEventListener("load", function(){
     let btnTestar = document.querySelector("#btnTestar");
     let btnExecutar =  document.querySelector("btnExec");
 
+    
     document.getElementById('arquivo').addEventListener('change', function(event) {
         var fileName = event.target.files.length > 0 ? event.target.files[0].name : 'Nenhum arquivo selecionado';
         document.getElementById('mensagem').textContent = fileName;
