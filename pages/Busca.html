@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscar</title>
-    <link rel="stylesheet" href="estilo.css">
-    <script src="../scripts/scriptpag1.js"></script>
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/busca.css">
+
+
 </head>
 <body>
     <div id="conteudo">
         <header class="cabecalho" id="header">
             <figure class="logo" >
-                <img class="logo__imagem" src="img/logo-twist.png" alt="">
+                <img class="logo__imagem" src="/img/logo-twist.png" alt="">
+
                 <figcaption class="logo__titulo">Twisters</figcaption>
             </figure>
             <nav class="navegacao" id="navigator">
@@ -24,30 +28,37 @@
                 </ul>
             </nav>
         </header>
-        <section class="main">
-            <p><strong>Selecione o tipo de verificação: </strong> </p>
-            <form action="" name="pagina1">
-                <input type="radio" id="regex1" name="regex" value="[^a-zA-Z0-9\\s]">
-                <label for="regex1">Caracteres Especiais</label><br>
-    
-                <input type="radio" id="regex2" name="regex" value="[a-z]">
-                <label for="regex2">Letras Minúsculas</label><br>
-    
-                <input type="radio" id="regex3" name="regex" value="\\d">
-                <label for="regex3">Dígitos Numéricos</label><br>
-    
-                <input type="radio" id="regex4" name="regex" value="[A-Z]">
-                <label for="regex4">Letras Maiúsculas</label><br><br>
-                <br/>
-                <br/>
-                <p><strong>Escreva seu texto: </strong></p>
-                <textarea id="textArea" cols="30" rows="20" placeholder="Digite seu texto aqui..."></textarea>
-                <br/><br/>
-                <input type="button" value="Limpar" id="btnLimpar">
-                <input type="button" onclick="buscarRegex()" value="Submeter" id="btnSubmeter">
-                <br/>
+        <main class="principal">
+            <form class="selecao" action="">
+                <fieldset class="panel selecao__opcoes">
+                    <h2 class="selecao__opcoes__titulo">Selecione o tipo de verificação: </h2>
+                    <div class="selecao__opcoes__conteudo" action="">
+                        <input class="" type="radio" name="verificacao" id="caracteres">
+                        <label for="caracteres">Caracteres especiais </label>
+                        <input type="radio" name="verificacao" id="letras">
+                        <label for="letras">Letras minúsculas </label>
+                        <input type="radio" name="varificacao" id="digitos">
+                        <label for="digitos">Digitos numéricos </label>
+                        <input type="radio" name="verificacao" id="maiusculas">
+                        <label for="maiusculas">Maiúsculas </label>
+                    </div>
+                </fieldset>
+                <fieldset class="panel selecao__texto">
+                    <h3 class="selecao__texto__titulo">Escreva seu texto:</h3>
+                    <textarea class="panel selecao__texto__textarea" name="" id="" cols="30" rows="20"></textarea>
+                    <div class="selecao__texto__botoes">
+                        <input class="botao" type="button" value="Limpar" id="btnLimpar">
+                        <input class="botao" type="button" value="Submeter" id="btnSubmeter">
+                    </div>
+                </fieldset>
+
             </form>
-        </section>
-        <footer></footer>
+        </main>
+        <footer class="rodape">
+            <a class="rodape__link" href="https://github.com/twistpucrio/formGrupo1">
+                <img class="rodape__link__imagem" src="/img/githubicon.png" alt="Github">
+            </a>
+            <p class="rodape__paragrafo"> <strong>Desenvolvido por</strong> — Danielle Guimarães e Vitória Carteri </p>
+        </footer>
 </body>
 </html>
