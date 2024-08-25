@@ -22,8 +22,10 @@ window.addEventListener("load", function(){
     let btnTestar = document.querySelector("#btnTestar");
     let btnExecutar =  document.querySelector("btnExec");
 
-    // colocar o evento de clicar nos botões
-
+    document.getElementById('arquivo').addEventListener('change', function(event) {
+        var fileName = event.target.files.length > 0 ? event.target.files[0].name : 'Nenhum arquivo selecionado';
+        document.getElementById('mensagem').textContent = fileName;
+    });
     btnExecutar.addEventListener("click", function(){
         let nome, texto;
         nome = document.querySelector("#nome");
