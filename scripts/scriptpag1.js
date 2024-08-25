@@ -1,25 +1,12 @@
-function limpar(){
-    let texto = document.querySelector("#conteudo");
-    let atividade = document.getElementsByName("atividade");
-
-    texto.value = " ";
-
-    for (at of atividade){
-        at.checked = false;
+function buscarRegex() {
+    const text = document.getElementById('textArea').value;
+    const regexValue = document.querySelector('input[name="regex"]:checked').value;
+    const regex = new RegExp(regexValue, 'g');
+    const matches = text.match(regex);
+    
+    if (matches) {
+        alert(`Padrão ${regexValue} encontrado, quantidade de ocorrências: ${matches.length}`);
+    } else {
+        alert(`Padrão ${regexValue} não encontrado`);
     }
 }
-
-function validar(){}
-
-window.addEventListener("load", function(){
-    let btnLimpar = document.querySelector(#btnLimpar);
-    let btnSubmeter = document.querySelector(#btnSubmeter);
-
-    btnLimpar.addEventListener("click", function(){
-        limpar()
-    });
-
-    btnValidar.addEventListener("click", function(){
-        validar()
-    });
-})
