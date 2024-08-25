@@ -1,42 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscar e substituir</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/Buscar_Substituir.css">
 </head>
 <body>
     <div id="conteudo">
-        <header id="header"> Twist </header>
-        <nav class="navegacao" id="navigator">
-            <ul class="navegacao__container">
-                <li class="navegacao__container__links"><a href="../index.html">Home</a></li>
-                <li class="navegacao__container__links"><a href="Busca.html">Buscar</a></li>
-                <li class="navegacao__container__links"><a href="Arquivo.html">Arquivo</a></li>
-                <li class="navegacao__container__links"><a href="Buscar_Substituir.html">Buscar e Substituir</a></li>
-                <li class="navegacao__container__links"><a href="Cadastro.html">Cadastro</a></li>
-            </ul>
-        </nav>
-        <section>
-            <br/>
-            <form>
-                <label for="nome"><strong>Pesquisa: </strong></label>
-                <input type="text" name="pesquisa" id="pesquisa">
-                <br/>
-                <br/>
-                <label for="nome"><strong>Substituir: </strong></label>
-                <input type="text" name="substituir" id="substituir">
-                <p><strong>Escreva seu texto: </strong></p>
-                <textarea name="conteudo" id="conteudo"
-                          cols="30" rows="20"> </textarea>
-                <br/><br/><br/>
-                <input type="button" value="Limpar"
-                id="btnLimpar">
-                <input type="button" value="Submeter"
-                id="btnSubmeter">
+        <header class="cabecalho" id="header">
+            <figure class="logo" >
+                <img class="logo__imagem" src="../img/logo-twist.png" alt="">
+                <figcaption class="logo__titulo">Twisters</figcaption>
+            </figure>
+            <nav class="navegacao" id="navigator">
+                <ul class="navegacao__container">
+                    <li class="navegacao__container__links"><a href="../index.html">Home</a></li>
+                    <li class="navegacao__container__links"><a href="Busca.html">Buscar</a></li>
+                    <li class="navegacao__container__links"><a href="Arquivo.html">Arquivo</a></li>
+                    <li class="navegacao__container__links"><a href="Buscar_Substituir.html">Buscar e Substituir</a></li>
+                    <li class="navegacao__container__links"><a href="Cadastro.html">Cadastro</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="principal">
+            <form class="formulario" >
+                <fieldset class="panel formulario__input">
+                    <div class="formulario__input__area">
+                        <label for="nome">Pesquisa: </label>
+                        <input type="text" name="pesquisa" id="pesquisa">
+                    </div>
+                    <div class="formulario__input__area">
+                        <label for="nome">Substituir: </label>
+                        <input type="text" name="substituir" id="substituir">
+                    </div>
+                </fieldset>
+                <fieldset class="panel formulario__textarea">
+                    <h3 class="formulario__textarea__titulo">Escreva seu texto: </h3>
+                    <textarea class="panel formulario__textarea__texto" name="areaDeTexto" id="areaDeTexto" cols="30" rows="20"></textarea>
+                    <div class="formulario__textarea__botoes">
+                        <input class="botao" type="button" value="Limpar"
+                        id="btnLimpar">
+                        <input class="botao" type="button" value="Submeter"
+                        id="btnSubmeter">
+                    </div>
+                </fieldset>
             </form>
         </section>
-        <footer></footer>
+        <footer class="rodape">
+            <a class="rodape__link" href="https://github.com/twistpucrio/formGrupo1">
+                <img class="rodape__link__imagem" src="/img/githubicon.png" alt="Github">
+            </a>
+            <p class="rodape__paragrafo"> <strong>Desenvolvido por</strong> — Danielle Guimarães e Vitória Carteri </p>
+        </footer>
 </body>
 </html>
