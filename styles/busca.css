@@ -104,7 +104,6 @@ textarea:focus {
 .botao:hover{
     background-color: #CB36BC;
     border-radius: 1rem;
-    border-color: #fff;
     color: #fff;
     font-weight: 500;
 }
