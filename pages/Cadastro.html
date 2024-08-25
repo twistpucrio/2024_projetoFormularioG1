@@ -5,30 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link rel="stylesheet" href="estilo.css">
+    <script src="scriptpag4.js"></script>
 </head>
 <body>
     <div id="conteudo">
-        <header id="header"> Twist </header>
-        <nav class="navegacao" id="navigator">
-            <ul class="navegacao__container">
-                <li class="navegacao__container__links"><a href="../index.html">Home</a></li>
-                <li class="navegacao__container__links"><a href="Busca.html">Buscar</a></li>
-                <li class="navegacao__container__links"><a href="Arquivo.html">Arquivo</a></li>
-                <li class="navegacao__container__links"><a href="Buscar_Substituir.html">Buscar e Substituir</a></li>
-                <li class="navegacao__container__links"><a href="Cadastro.html">Cadastro</a></li>
-            </ul>
-        </nav>
-        <section>
+        <header class="cabecalho" id="header">
+            <figure class="logo" >
+                <img class="logo__imagem" src="img/logo-twist.png" alt="">
+                <figcaption class="logo__titulo">Twisters</figcaption>
+            </figure>
+            <nav class="navegacao" id="navigator">
+                <ul class="navegacao__container">
+                    <li class="navegacao__container__links"><a href="../index.html">Home</a></li>
+                    <li class="navegacao__container__links"><a href="Busca.html">Buscar</a></li>
+                    <li class="navegacao__container__links"><a href="Arquivo.html">Arquivo</a></li>
+                    <li class="navegacao__container__links"><a href="Buscar_Substituir.html">Buscar e Substituir</a></li>
+                    <li class="navegacao__container__links"><a href="Cadastro.html">Cadastro</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="main">
             <form action="">
                 <p><strong>Dados pessoais: </strong></p>
                 <label for="nome">Nome: </label>
                 <input type="text" name="nome" id="nome">
                 <br/><br/>
                 <label for="nome">CPF: </label>
-                <input type="text" value="ddd.ddd.ddd-dd" name="cpf" id="cpf">
+                <input type="text" placeholder="ddd.ddd.ddd-dd" name="cpf" id="cpf">
                 <br/><br/>
                 <label for="dataNascimento">Nascimento: </label>
-                <input type="data" value="dd/mm/aaaa" name="dataNascimento" id="dataNascimento">
+                <input type="data" placeholder="dd/mm/aaaa" name="dataNascimento" id="dataNascimento">
                 <br/><br/>
 
                 <p><strong> Dados perfil: </strong></p>
@@ -36,13 +42,13 @@
                 <input type="text" id="usu">
                 <br/><br/>
                 <label for="mail">Email: </label>
-                <input type="text" value="algumacoisa@algumacoisa..." id="mail">
+                <input type="text" placeholder="algumacoisa@algumacoisa..." id="mail">
                 <br/><br/>
                 <label for="senha">Senha </label>
-                <input type="password" value="senhanshshs" id="senha">
+                <input type="password" placeholder="senhanshshs" id="senha">
                 <br/><br/>
                 <label for="senha">Senha </label>
-                <input type="password" value="senhanshshs" id="senha">
+                <input type="password" placeholder="senhanshshs" id="senha">
                 <br/><br/>
                 <input type="button" value="Limpar"
                 id="btnLimpar">
