@@ -47,3 +47,16 @@ function validarExtensao(arquivo,extensao){
         alert("Diferente");
      }
 }
+window.addEventListener('load', function(){
+  document.getElementById('arquivo').addEventListener('change', function(event) {
+        var fileName = event.target.files.length > 0 ? event.target.files[0].name : 'Nenhum arquivo selecionado';
+        document.getElementById('mensagem').textContent = fileName;
+    });
+    btnExecutar.addEventListener("click", function(){
+        let nome, texto;
+        nome = document.querySelector("#nome");
+        texto =  document.querySelector("texto");
+        executar (nome,texto,value);
+    });
+});
+

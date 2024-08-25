@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Busca</title>
-    <link rel="stylesheet" href="estilo.css">
+    <title>Buscar </title>
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/arquivo.css">
+
+
     <script src="../scripts/scriptpag2.js"></script>
 </head>
-<body>
+<body> 
+    
     <div id="conteudo">
         <header class="cabecalho" id="header">
             <figure class="logo" >
-                <img class="logo__imagem" src="img/logo-twist.png" alt="">
+
+                <img class="logo__imagem" src="/img/logo-twist.png" alt="">
+
                 <figcaption class="logo__titulo">Twisters</figcaption>
             </figure>
             <nav class="navegacao" id="navigator">
@@ -24,36 +31,61 @@
                 </ul>
             </nav>
         </header>
-        <section class="main">
-            <form id="formulario">
-                <p><strong>Selecione o tipo de arquivo: </strong></p>
-                <input type="radio" name="atividade" id="caracteres">
-                <label for="caracteres">JPG / JPEG / PNG </label>
 
-                <input type="radio" name="atividade" id="letras">
-                <label for="letras">PDF </label>
 
-                <input type="radio" name="atividade" id="digitos">
-                <label for="digitos">DOC </label>
+        <section class="principal ">
+            <form class="formulario">
+                <fieldset class="panel formulario__campo--formatos">
+                    <h2 class="formulario__formatos__titulo">Selecione o tipo de arquivo: </h2>
+                    <div class="formulario__formatos__selecao">
+                        <input type="radio" name="formato" id="imagem">
+                        <label for="formato">JPG / JPEG / PNG</label>
 
-                <input type="radio" name="atividade" id="maiusculas">
-                 <label for="maiusculas">CSV </label>
-                <br/>
-                <p><strong>Reglas nomenclatura: </strong></p>
-                <ul>
-                    <li>Não possibilitar preencher o nome do arquivo com caractéres especiais (exceto underscore); </li>
-                    <br/>
-                    <li>Iniciar com letra maiúscula; </li>
-                    <br/>
-                    <li>Deve ter o tamanho mínimo 8 caracteres e máximo 15</li>
-                </ul>
-                <p><strong>Arquivo: </strong></p>
-                <input type="file" id="nomeArquivo" accept=".jpg,.png,.pdf" required>
-                <br/><br/>
-                <input type="button" value="Limpar" id="btnLimpar">
-                <input type="button" onclick="validarArquivo()" value="Submeter" id="btnSubmeter">
+                        <input type="radio" name="formato" id="pdf">
+                        <label for="pdf">PDF</label>
+
+                        <input type="radio" name="formato" id="documento">
+                        <label for="documento">DOC</label>
+
+                        <input type="radio" name="formato" id="csv">
+                        <label for="csv">CSV</label>
+                    </div>
+                </fieldset>
+                <fieldset class="panel formulario__campo--arquivo">
+                    <div class="formulario__arquivo">
+                        <div class="formulario__arquivo__customizado">
+                            <label for="arquivo" class="formulario__arquivo__customizado__titulo">
+                                Selecione um arquivo:
+                                <input type="file" id="arquivo" />
+                            </label>
+                            <p class="formulario__arquivo__customizado__mensagem" id="mensagem">Nenhum arquivo selecionado</p>
+                        </div>
+                        <hgroup class="formulario__arquivo__regras">
+                            <h4 class="formulario__arquivo__regras__titulo">Regras de nomeclatura: </h4>
+                            <ul class="formulario__Arquivo__regras__texto">
+                                <li class="formulario__Arquivo__regras__texto__paragrafo">Não possibilitar preencher o nome do arquivo com caractéres especiais (exceto underscore); </li>
+                                <li class="formulario__Arquivo__regras__texto__paragrafo" >Iniciar com letra minúscula; </li>
+                                <li class="formulario__Arquivo__regras__texto__paragrafo">Deve ter o tamanho mínimo 8 caracteres e máximo 15</li>
+                            </ul>
+                        </hgroup>
+                    </div>
+                    <div class="formulario__arquivo__botoes">
+                        <input class="botao" type="button" value="Limpar"
+                        id="btnLimpar">
+                        <input class="botao"
+                        type="button" value="Submeter"
+                        id="btnSubmeter"  onclick="validarArquivo()">
+                    </div>
+                </fieldset>
+
+
             </form>
         </section>
-        <footer></footer>
+        <footer class="rodape">
+            <a class="rodape__link" href="https://github.com/twistpucrio/formGrupo1">
+                <img class="rodape__link__imagem" src="/img/githubicon.png" alt="Github">
+            </a>
+            <p class="rodape__paragrafo"> <strong>Desenvolvido por</strong> — Danielle Guimarães e Vitória Carteri </p>
+        </footer>
 </body>
 </html>
