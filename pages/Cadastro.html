@@ -5,11 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link rel="stylesheet" href="estilo.css">
-    <script src="../scripts/scriptpag4.js"></script>
-    <style>
-        .error { color: red; }
-        .valid { color: green; }
-    </style>
+    <script src="scriptpag4.js"></script>
+
 </head>
 <body>
     <div id="conteudo">
@@ -29,47 +26,36 @@
             </nav>
         </header>
         <section class="main">
-            <form id="userForm">
+            <form action="">
                 <p><strong>Dados pessoais: </strong></p>
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" onblur="validateName()">
-                <span id="nameError" class="error"></span><br>
-                <br/>
-
-                <label for="cpf">CPF:</label>
-                <input type="text" id="cpf" name="cpf" onblur="validateCPF()" placeholder="ddd.ddd.ddd-dd" oninput="applyCPFMask(this)">
-                <span id="cpfError" class="error"></span><br>
-                <br/>
-
-                <label for="dob">Data de Nascimento:</label>
-                <input type="text" id="dob" name="dob" placeholder="dd/mm/aaaa" onblur="validateDOB()" oninput="applyDOBMask(this)">
-                <span id="dobError" class="error"></span><br>
-                <br/>
+                <label for="nome">Nome: </label>
+                <input type="text" name="nome" id="nome">
+                <br/><br/>
+                <label for="nome">CPF: </label>
+                <input type="text" placeholder="ddd.ddd.ddd-dd" name="cpf" id="cpf">
+                <br/><br/>
+                <label for="dataNascimento">Nascimento: </label>
+                <input type="data" placeholder="dd/mm/aaaa" name="dataNascimento" id="dataNascimento">
+                <br/><br/>
 
                 <p><strong> Dados perfil: </strong></p>
-                <br/>
-                <label for="username">Usuário:</label>
-                <input type="text" id="username" name="username" onblur="validateUsername()">
-                <span id="usernameError" class="error"></span><br>
-                <br/>
+                <label for="usu">Usuário: </label>
+                <input type="text" id="usu">
+                <br/><br/>
+                <label for="mail">Email: </label>
+                <input type="text" placeholder="algumacoisa@algumacoisa..." id="mail">
+                <br/><br/>
+                <label for="senha">Senha </label>
+                <input type="password" placeholder="senhanshshs" id="senha">
+                <br/><br/>
+                <label for="senha">Senha </label>
+                <input type="password" placeholder="senhanshshs" id="senha">
+                <br/><br/>
+                <input type="button" value="Limpar"
+                id="btnLimpar">
+                <input type="button" value="Submeter"
+                id="btnSubmeter">
 
-                <label for="email">Email:</label>
-                <input type="text" id="email" name="email" placeholder="algumacoisa@algumacoisa..." onblur="validateEmail()">
-                <span id="emailError" class="error"></span><br>
-                <br/>
-
-                <label for="password1">Senha:</label>
-                <input type="password" id="password1" name="password1" oninput="validatePassword()">
-                <span id="passwordError" class="error"></span><br>
-                <br/>
-
-                <label for="password2">Confirmação de Senha:</label>
-                <input type="password" id="password2" name="password2" onblur="validatePasswordMatch()">
-                <span id="passwordMatchError" class="error"></span><br>
-                <br/>
-
-                <input type="button" value="Limpar" id="btnLimpar">
-                <input type="button" value="Submeter" onclick="submitForm()" id="btnSubmeter">
             </form>
         </section>
         <footer></footer>

@@ -27,18 +27,21 @@ function validateFileName() {
         return;
     }
 
-    // Verificar se o nome contém apenas caracteres permitidos
-    if (!/^[A-Za-z0-9_]+$/.test(fileName)) {
-        errorMessage.textContent = "O nome do arquivo não pode conter caracteres especiais (exceto underline).";
-        return;
-    }
+    
+    
 
-    // Verificar o tamanho do nome do arquivo
-    if (fileName.length < 8 || fileName.length > 15) {
-        errorMessage.textContent = "O nome do arquivo deve ter entre 8 e 15 caracteres.";
-        return;
-    }
 
     // Se todas as validações passarem
     errorMessage.textContent = "Nome do arquivo válido!";
 }
+
+document.getElementById('arquivo').addEventListener('change', function(event) {
+        var fileName = event.target.files.length > 0 ? event.target.files[0].name : 'Nenhum arquivo selecionado';
+        document.getElementById('mensagem').textContent = fileName;
+    });
+    btnExecutar.addEventListener("click", function(){
+        let nome, texto;
+        nome = document.querySelector("#nome");
+        texto =  document.querySelector("texto");
+        executar (nome,texto,value);
+    });
