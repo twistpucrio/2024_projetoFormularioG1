@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/styles/reset.css">
     <link rel="stylesheet" href="/styles/base.css">
     <link rel="stylesheet" href="/styles/arquivo.css">
+    <script src="../scripts/scriptpag2.js"></script>
 </head>
 <body>
     <div id="conteudo">
@@ -27,8 +28,8 @@
         </header>
         <section class="principal">
             <form class="formulario">
-                <fieldset class="panel formulario__formatos">
-                    <h2 class="formulario__formatos__titulo">Selecione o tipo de arquivo: </h2>
+                <fieldset class="panel formulario__campo--formatos">
+                    <label class="formulario__formatos__titulo">Selecione o tipo de arquivo: </label>
                     <div class="formulario__formatos__selecao">
                         <input type="radio" name="formato" id="imagem">
                         <label for="formato">JPG / JPEG / PNG</label>
@@ -43,24 +44,29 @@
                         <label for="csv">CSV</label>
                     </div>
                 </fieldset>
-                <fieldset class="panel">
-                    <div class="">
-                        <h3 class="">Arquivo: </h3>
-                        <input type="file" name="arquivo" id="arquivo">
-                        
-                        <hgroup class="">
-                            <h4 class="">Reglas nomenclatura: </h4>
-                            <ul class="">
-                                <li>Não possibilitar preencher o nome do arquivo com caractéres especiais (exceto underscore); </li>
-                                <li>Iniciar com letra minúscula; </li>
-                                <li>Deve ter o tamanho mínimo 8 caracteres e máximo 15</li>
+                <fieldset class="panel formulario__campo--arquivo">
+                    <div class="formulario__arquivo">
+                        <div class="formulario__arquivo__customizado">
+                            <label for="arquivo" class="formulario__arquivo__customizado__titulo">
+                                Selecione um arquivo
+                                <input type="file" id="arquivo" />
+                            </label>
+                            <p class="formulario__arquivo__customizado__mensagem" id="mensagem">Nenhum arquivo selecionado</p>
+                        </div>
+                        <hgroup class="formulario__arquivo__regras">
+                            <h4 class="formulario__arquivo__regras__titulo">Regras de nomeclatura: </h4>
+                            <ul class="formulario__Arquivo__regras__texto">
+                                <li class="formulario__Arquivo__regras__texto__paragrafo">Não possibilitar preencher o nome do arquivo com caractéres especiais (exceto underscore); </li>
+                                <li class="formulario__Arquivo__regras__texto__paragrafo" >Iniciar com letra minúscula; </li>
+                                <li class="formulario__Arquivo__regras__texto__paragrafo">Deve ter o tamanho mínimo 8 caracteres e máximo 15</li>
                             </ul>
                         </hgroup>
                     </div>
-                    <div class="arquivos botoes">
-                        <input type="button" value="Limpar"
+                    <div class="formulario__arquivo__botoes">
+                        <input class="botao" type="button" value="Limpar"
                         id="btnLimpar">
-                        <input type="button" value="Submeter"
+                        <input class="botao"
+                        type="button" value="Submeter"
                         id="btnSubmeter">
                     </div>
                 </fieldset>
