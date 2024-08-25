@@ -1,55 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/cadastro.css">
+
 </head>
 <body>
     <div id="conteudo">
-        <header id="header"> Twist </header>
-        <nav class="navegacao" id="navigator">
-            <ul class="navegacao__container">
-                <li class="navegacao__container__links"><a href="../index.html">Home</a></li>
-                <li class="navegacao__container__links"><a href="Busca.html">Buscar</a></li>
-                <li class="navegacao__container__links"><a href="Arquivo.html">Arquivo</a></li>
-                <li class="navegacao__container__links"><a href="Buscar_Substituir.html">Buscar e Substituir</a></li>
-                <li class="navegacao__container__links"><a href="Cadastro.html">Cadastro</a></li>
-            </ul>
-        </nav>
-        <section>
-            <form action="">
-                <p><strong>Dados pessoais: </strong></p>
-                <label for="nome">Nome: </label>
-                <input type="text" name="nome" id="nome">
-                <br/><br/>
-                <label for="nome">CPF: </label>
-                <input type="text" value="ddd.ddd.ddd-dd" name="cpf" id="cpf">
-                <br/><br/>
-                <label for="dataNascimento">Nascimento: </label>
-                <input type="data" value="dd/mm/aaaa" name="dataNascimento" id="dataNascimento">
-                <br/><br/>
-
-                <p><strong> Dados perfil: </strong></p>
-                <label for="usu">Usuário: </label>
-                <input type="text" id="usu">
-                <br/><br/>
-                <label for="mail">Email: </label>
-                <input type="text" value="algumacoisa@algumacoisa..." id="mail">
-                <br/><br/>
-                <label for="senha">Senha </label>
-                <input type="password" value="senhanshshs" id="senha">
-                <br/><br/>
-                <label for="senha">Senha </label>
-                <input type="password" value="senhanshshs" id="senha">
-                <br/><br/>
-                <input type="button" value="Limpar"
-                id="btnLimpar">
-                <input type="button" value="Submeter"
-                id="btnSubmeter">
+        <header class="cabecalho" id="header">
+            <figure class="logo" >
+                <img class="logo__imagem" src="/img/logo-twist.png" alt="">
+                <figcaption class="logo__titulo">Twisters</figcaption>
+            </figure>
+            <nav class="navegacao" id="navigator">
+                <ul class="navegacao__container">
+                    <li class="navegacao__container__links"><a href="../index.html">Home</a></li>
+                    <li class="navegacao__container__links"><a href="Busca.html">Buscar</a></li>
+                    <li class="navegacao__container__links"><a href="Arquivo.html">Arquivo</a></li>
+                    <li class="navegacao__container__links"><a href="Buscar_Substituir.html">Buscar e Substituir</a></li>
+                    <li class="navegacao__container__links"><a href="Cadastro.html">Cadastro</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="principal">
+            <form class="formulario">
+                <fieldset class="panel formulario__dados">
+                    <h3 class="formulario__dados__titulo">Dados pessoais:</h3>
+                    <div class="formulario__dados__input">
+                        <div class="formulario__dados__input__area">
+                            <label for="nome">Nome: </label>
+                            <input type="text" name="nome" id="nome">
+                        </div>
+                        <div class="formulario__dados__input__area">
+                            <label for="nome">CPF: </label>
+                            <input type="text" placeholder="ddd.ddd.ddd-dd" name="cpf" id="cpf">
+                        </div>
+                        <div class="formulario__dados__input__area">
+                            <label for="dataNascimento">Nascimento: </label>
+                            <input type="data" placeholder="dd/mm/aaaa" name="dataNascimento" id="dataNascimento">
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="panel formulario__dados">
+                    <h3 class="formulario__dados__titulo"> Dados perfil: </h3>
+                    <div class="formulario__dados__input">
+                        <div class="formulario__dados__input__area">
+                            <label for="usu">Usuário: </label>
+                            <input type="text" id="usu">
+                        </div>
+                        <div class="formulario__dados__input__area">
+                            <label for="mail">Email: </label>
+                            <input type="text" placeholder="algumacoisa@algumacoisa..." id="mail">
+                        </div>
+                        <div class="formulario__dados__input__area">
+                            <label for="senha">Senha </label>
+                            <input type="password" placeholder="************" id="senha">
+                        </div>
+                        <div class="formulario__dados__input__area">
+                            <label for="senha">Senha: </label>
+                            <input type="password" placeholder="************" id="senha">
+                        </div>
+                    </div>
+                    <div class="formulario__dados__botoes">
+                        <input class="botao" type="button" value="Limpar"
+                        id="btnLimpar">
+                        <input class="botao" type="button" value="Submeter"
+                        id="btnSubmeter">
+                    </div>
+                </fieldset>
             </form>
         </section>
-        <footer></footer>
+        <footer class="rodape">
+            <a class="rodape__link" href="https://github.com/twistpucrio/formGrupo1">
+                <img class="rodape__link__imagem" src="/img/githubicon.png" alt="Github">
+            </a>
+            <p class="rodape__paragrafo"> <strong>Desenvolvido por</strong> — Danielle Guimarães e Vitória Carteri </p>
+        </footer>
 </body>
 </html>
