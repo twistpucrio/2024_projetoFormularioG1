@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/styles/reset.css">
     <link rel="stylesheet" href="/styles/base.css">
     <link rel="stylesheet" href="/styles/busca.css">
+    <script src="../scripts/scriptpag1.js"></script>
 
 
 </head>
@@ -35,22 +36,22 @@
                 <fieldset class="panel selecao__opcoes">
                     <h2 class="selecao__opcoes__titulo">Selecione o tipo de verificação: </h2>
                     <div class="selecao__opcoes__conteudo" action="">
-                        <input class="" type="radio" name="verificacao" id="caracteres">
+                        <input class="" value="([^a-zA-Z0-9\\s])" type="radio" name="verificacao" id="caracteres especiais" >
                         <label for="caracteres">Caracteres especiais </label>
-                        <input type="radio" name="verificacao" id="letras">
+                        <input type="radio" value="([a-z])" name="verificacao" id="letras minúsculas" >
                         <label for="letras">Letras minúsculas </label>
-                        <input type="radio" name="varificacao" id="digitos">
+                        <input type="radio" value="([0-9])" name="varificacao" id="digitos" >
                         <label for="digitos">Digitos numéricos </label>
-                        <input type="radio" name="verificacao" id="maiusculas">
+                        <input type="radio" value="([A-Z])" name="verificacao" id="letras maiusculas" >
                         <label for="maiusculas">Maiúsculas </label>
                     </div>
                 </fieldset>
                 <fieldset class="panel selecao__texto">
                     <h3 class="selecao__texto__titulo">Escreva seu texto:</h3>
-                    <textarea class="panel selecao__texto__textarea" name="" id="" cols="30" rows="20"></textarea>
+                    <textarea class="panel selecao__texto__textarea" name="" id="textArea" cols="30" rows="20"></textarea>
                     <div class="selecao__texto__botoes">
                         <input class="botao" type="button" value="Limpar" id="btnLimpar">
-                        <input class="botao" type="button" value="Submeter" id="btnSubmeter">
+                        <input class="botao" type="button" value="Submeter" id="btnSubmeter" onclick="buscarRegex()">
                     </div>
                 </fieldset>
 
