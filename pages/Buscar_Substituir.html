@@ -39,21 +39,21 @@
                 <fieldset class="panel formulario__input">
                     <div class="formulario__input__area">
                         <label for="nome">Pesquisa: </label>
-                        <input type="text" name="pesquisa" id="pesquisa">
+                        <input type="text" name="pesquisa" id="palavraProcurar">
                     </div>
                     <div class="formulario__input__area">
                         <label for="nome">Substituir: </label>
-                        <input type="text" name="substituir" id="substituir">
+                        <input type="text" name="substituir" id="palavraSubstituir">
                     </div>
                 </fieldset>
                 <fieldset class="panel formulario__textarea">
                     <h3 class="formulario__textarea__titulo">Escreva seu texto: </h3>
-                    <textarea class="panel formulario__textarea__texto" name="areaDeTexto" id="areaDeTexto" cols="30" rows="20"></textarea>
+                    <textarea class="panel formulario__textarea__texto" name="resultado" id="textoOriginal" cols="30" rows="20"></textarea>
                     <div class="formulario__textarea__botoes">
                         <input class="botao" type="button" value="Limpar"
                         id="btnLimpar">
                         <input class="botao" type="button" value="Submeter"
-                        id="btnSubmeter"  onclick="substituirPalavra()">
+                        id="btnSubmeter">
                     </div>
                 </fieldset>
 
