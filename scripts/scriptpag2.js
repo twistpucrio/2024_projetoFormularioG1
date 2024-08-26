@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const mensagem = document.getElementById('mensagem');
 
     function validarNomeArquivo(nome) {
-        const regex = /^[A-Z][A-Za-z0-9_]{7,14}$/;
+        const regex = /^[a-z][a-zA-Z0-9_]$/;
         return regex.test(nome);
     }
 
@@ -49,10 +49,21 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
-        if (validarNomeArquivo(nomeSemExtensao)) {
-            alert("O nome do arquivo deve começar com uma letra maiúscula, ter entre 8 e 15 caracteres e não deve conter caracteres especiais (exceto underscore).");
+
+        if (!/^[A-Z]/.test(nomeSemExtensao)) {
+            alert("O nome do arquivo deve começar com letra maiúscula.");
             return;
         }
+    
+        if (!/^[A-Za-z0-9_]+$/.test(nomeSemExtensao)) {
+            alert("O nome do arquivo não pode conter caracteres especiais (exceto underline).");
+            return;
+        }
+    
+        
+        if (nomeSemExtensao.length < 8 || nomeSemExtensao.length > 15) {
+            alert( "O nome do arquivo deve ter entre 8 e 15 caracteres.");
+            return;}
 
         alert("Arquivo válido e selecionado com sucesso.");
     }
