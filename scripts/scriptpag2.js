@@ -1,62 +1,75 @@
-function validarArquivo(arquivo,extensao) {
-    caminho = arquivo.value.split("\\");
-    alert("Primeira forma: "+
-        caminho[caminho.length-1])
-        
-     let indice = caminho.length-1;
-     let comp = caminho[indice].split(".");
-     let ext = comp[comp.length-1];
+document.addEventListener("DOMContentLoaded", function() {
+    const btnSubmeter = document.getElementById('btnSubmeter');
+    const btnLimpar = document.getElementById('btnLimpar');
+    const arquivoInput = document.getElementById('arquivo');
+    const mensagem = document.getElementById('mensagem');
 
-     if(extensao.lower === ext.lower){
-        alert("Igual");
-     }else{
-        alert("Diferente");
-     }
-}
-    const regex = /^[A-Z][A-Za-z0-9_]{7,14}$/;
-
-    if (!regex.test(nomeArquivo)) {
-        let mensagem = "O nome do arquivo deve:\n";
-        if (/[A-Z]/.test(nomeArquivo)) {
-            mensagem += "- Iniciar com letra maiúscula.\n";
-        }
-        if (/^[A-Za-z0-9_]/.test(nomeArquivo)) {
-            mensagem += "- Não conter caracteres especiais (exceto underscore).\n";
-        }
-        if (nomeArquivo.length < 8 || nomeArquivo.length > 15) {
-            mensagem += "- Ter entre 8 e 15 caracteres.\n";
-        }
-        alert(mensagem);
-    } else {
-        alert("Nome do arquivo válido!");
+    function validarNomeArquivo(nome) {
+        const regex = /^[A-Z][A-Za-z0-9_]{7,14}$/;
+        return regex.test(nome);
     }
-}
 
-function validarExtensao(arquivo,extensao){
-    caminho = arquivo.value.split("\\");
-    alert("Primeira forma: "+
-        caminho[caminho.length-1])
-        
-     let indice = caminho.length-1;
-     let comp = caminho[indice].split(".");
-     let ext = comp[comp.length-1];
+    function verificarExtensao(extensao, tipoSelecionado) {
+        const formatos = {
+            imagem: ['jpg', 'jpeg', 'png'],
+            pdf: ['pdf'],
+            doc: ['doc'],
+            csv: ['csv']
+        };
+        return formatos[tipoSelecionado].includes(extensao);
+    }
 
-     if(extensao.lower === ext.lower){
-        alert("Igual");
-     }else{
-        alert("Diferente");
-     }
-}
-window.addEventListener('load', function(){
-  document.getElementById('arquivo').addEventListener('change', function(event) {
-        var fileName = event.target.files.length > 0 ? event.target.files[0].name : 'Nenhum arquivo selecionado';
-        document.getElementById('mensagem').textContent = fileName;
-    });
-    btnExecutar.addEventListener("click", function(){
-        let nome, texto;
-        nome = document.querySelector("#nome");
-        texto =  document.querySelector("texto");
-        executar (nome,texto,value);
+    function validarArquivo() {
+        const radioButtons = document.querySelectorAll('input[name="formato"]');
+        let formatoSelecionado = null;
+
+        for (const radioButton of radioButtons) {
+            if (radioButton.checked) {
+                formatoSelecionado = radioButton.id;
+                break;
+            }
+        }
+
+        if (!formatoSelecionado) {
+            alert("Selecione um formato de arquivo.");
+            return;
+        }
+
+        const file = arquivoInput.files[0];
+        if (!file) {
+            alert("Nenhum arquivo selecionado.");
+            return;
+        }
+
+        const nomeArquivo = file.name;
+        const [nomeSemExtensao, extensaoArquivo] = nomeArquivo.split('.');
+
+        if (extensaoArquivo && !verificarExtensao(extensaoArquivo.toLowerCase(), formatoSelecionado)) {
+            alert("O formato do arquivo selecionado não corresponde ao tipo de arquivo escolhido.");
+            return;
+        }
+
+        if (validarNomeArquivo(nomeSemExtensao)) {
+            alert("O nome do arquivo deve começar com uma letra maiúscula, ter entre 8 e 15 caracteres e não deve conter caracteres especiais (exceto underscore).");
+            return;
+        }
+
+        alert("Arquivo válido e selecionado com sucesso.");
+    }
+
+    function limparFormulario() {
+        document.querySelector('.formulario').reset();
+        mensagem.textContent = "Nenhum arquivo selecionado";
+    }
+
+    btnSubmeter.addEventListener('click', validarArquivo);
+    btnLimpar.addEventListener('click', limparFormulario);
+
+    arquivoInput.addEventListener('change', function() {
+        if (arquivoInput.files.length > 0) {
+            mensagem.textContent = arquivoInput.files[0].name;
+        } else {
+            mensagem.textContent = "Nenhum arquivo selecionado";
+        }
     });
 });
-
